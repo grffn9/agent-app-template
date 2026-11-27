@@ -1,0 +1,28 @@
+{
+  "name": "agent-app-template",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Starter for agent apps that run prompts on any AI token source you have, through model-backends.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/main.ts",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "model-backends": "github:grffn9/model-backends#v0.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "26.6.6",
+    "eslint": "10.15.0",
+    "prettier": "3.10.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.74.0"
+  }
+}
